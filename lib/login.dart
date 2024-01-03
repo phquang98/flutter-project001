@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -13,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
         body: Column(
       children: <Widget>[
-        Expanded(child: Container(child: Image.asset('assets/logo_evn.png'))),
+        Expanded(child: Image.asset('assets/logo_evn.png')),
         Expanded(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -95,8 +96,8 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Expanded(
                 child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 40, right: 40, top: 10),
+                    padding: const EdgeInsets.only(
+                        left: 40, right: 40, top: 10, bottom: 0),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
@@ -108,6 +109,39 @@ class _LoginScreenState extends State<LoginScreen> {
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold)),
                             ))))),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.only(left: 10, right: 5),
+                      child: SignInButton(
+                        Buttons.AppleDark,
+                        text: "Sign in",
+                        onPressed: () {},
+                      ),
+                    )),
+                    Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.only(left: 5, right: 5),
+                      child: SignInButton(
+                        Buttons.GitHub,
+                        text: "Sign in",
+                        onPressed: () {},
+                      ),
+                    )),
+                    Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.only(left: 5, right: 10),
+                      child: SignInButton(
+                        Buttons.Facebook,
+                        text: "Sign in",
+                        onPressed: () {},
+                      ),
+                    )),
+                  ],
+                ))
           ],
         ))
       ],
