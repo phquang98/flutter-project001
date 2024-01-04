@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Row(
                               children: <Widget>[
                                 Padding(
-                                    padding: EdgeInsets.all(20),
+                                    padding: const EdgeInsets.all(20),
                                     child: Icon(Icons.lock,
                                         color: Colors.blue[900])),
                                 Text('P A S S W O R D',
@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       fontWeight: FontWeight.bold)),
                             ))))),
             Padding(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Row(
                   children: <Widget>[
                     Expanded(
